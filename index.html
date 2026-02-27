@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Site — Deployed with Ink</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #0a0a0a;
+        color: #ededed;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .app {
+        text-align: center;
+        padding: 2rem;
+        max-width: 600px;
+      }
+
+      header {
+        margin-bottom: 3rem;
+      }
+
+      .logo {
+        color: #f59e0b;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        color: #888;
+        font-size: 1.1rem;
+      }
+
+      .subtitle a {
+        color: #f59e0b;
+        text-decoration: none;
+      }
+
+      .subtitle a:hover {
+        text-decoration: underline;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .feature {
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 12px;
+        padding: 1.5rem 1rem;
+        transition: border-color 0.2s;
+      }
+
+      .feature:hover {
+        border-color: #444;
+      }
+
+      .feature h3 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature p {
+        color: #666;
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+
+      .links {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+
+      .links a {
+        color: #888;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .links a:hover {
+        color: #f59e0b;
+      }
+
+      .clock {
+        margin-bottom: 2.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #f59e0b;
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="logo">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+            <line x1="12" y1="22" x2="12" y2="15.5" />
+            <polyline points="22 8.5 12 15.5 2 8.5" />
+          </svg>
+        </div>
+        <h1>Static Site</h1>
+        <p class="subtitle">Deployed with <a href="https://ml.ink" target="_blank" rel="noopener noreferrer">Ink</a></p>
+      </header>
+
+      <main>
+        <div class="clock" id="clock"></div>
+
+        <div class="features">
+          <div class="feature">
+            <h3>No Build Step</h3>
+            <p>Plain HTML, CSS, and JavaScript</p>
+          </div>
+          <div class="feature">
+            <h3>Zero Dependencies</h3>
+            <p>No frameworks or bundlers needed</p>
+          </div>
+          <div class="feature">
+            <h3>Instant Deploy</h3>
+            <p>Push and it's live immediately</p>
+          </div>
+        </div>
+
+        <div class="links">
+          <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">MDN Docs</a>
+          <a href="https://docs.ml.ink" target="_blank" rel="noopener noreferrer">Ink Docs</a>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var h = String(now.getHours()).padStart(2, '0');
+        var m = String(now.getMinutes()).padStart(2, '0');
+        var s = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').textContent = h + ':' + m + ':' + s;
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>

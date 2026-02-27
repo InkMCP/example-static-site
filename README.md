@@ -1,25 +1,24 @@
-# Static Site
+# Example Static Site
 
-Learn how to deploy a plain HTML/CSS/JS site with Ink MCP using a simple prompt.
+A simple HTML/CSS/JS static site, ready to deploy.
+
+## Setup
+
+Open `index.html` in your browser. No build step needed.
+
+## Deploy with Ink
+
+Connect the [Ink MCP server](https://docs.ml.ink/quick-start) to your AI agent and prompt:
+
+> Deploy this static site with Ink.
 
 ## Tutorial
 
-Full step-by-step tutorial: [docs.ml.ink/examples/frontend/static-site](https://docs.ml.ink/examples/frontend/static-site)
-
-### Prerequisites
-
-- An [Ink](https://ml.ink) account
-- Ink MCP connected to your AI agent ([setup guide](https://docs.ml.ink/quick-start))
-
-### Quick Deploy
-
-1. Connect Ink MCP to your agent
-2. Prompt: "Create a simple portfolio website with HTML, CSS, and vanilla JavaScript. Include an about page, projects section, and contact form."
-3. Prompt: "Deploy with Ink"
+Full tutorial: [docs.ml.ink/examples/frontend/static-site](https://docs.ml.ink/examples/frontend/static-site)
 
 ## About Ink
 
-[Ink](https://ml.ink) is a deployment platform built for AI agents. Connect the Ink MCP server to any AI coding agent and deploy applications, manage domains, databases, and infrastructure — all through natural language prompts.
+[Ink](https://ml.ink) is a deployment platform built for AI agents.
 
 - **Website**: [ml.ink](https://ml.ink)
 - **Documentation**: [docs.ml.ink](https://docs.ml.ink)
